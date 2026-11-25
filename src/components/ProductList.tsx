@@ -7,7 +7,7 @@ type Props = {
 };
 
 export default function ProductList({ title, items }: Props) { 
-    return ( <section className="container"> 
+    return ( <section className="container" id="products"> 
     <h2 className="section-title">{title}</h2> 
     <div className="product-grid"> 
         {items.map((p) => ( 
