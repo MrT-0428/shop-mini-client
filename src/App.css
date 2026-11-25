@@ -188,3 +188,26 @@ main {
   color: #fff;
   border-color: #1f5fd1;
 }
+
+/* ---------- Trạng thái tồn kho ---------- */
+.stock-out {
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.stock-available {
+  color: #16a34a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn:disabled:hover {
+  background: #9ca3af;
+}
