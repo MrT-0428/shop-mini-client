@@ -160,3 +160,31 @@ main {
   background: #e5e7eb;
   transform: translateY(-2px);
 }
+
+/* ---------- Category List ---------- */
+.category-section {
+  margin-bottom: 32px;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.category-item {
+  padding: 10px 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
+  background: #fff;
+  color: #1f2937;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.category-item:hover {
+  background: #1f5fd1;
+  color: #fff;
+  border-color: #1f5fd1;
+}
