@@ -119,4 +119,44 @@ main {
     .nav { 
       display: none; 
     } 
-  }
+}
+
+
+/* ---------- Banner ---------- */
+.banner {
+  background: linear-gradient(135deg, #1f5fd1, #5cc8f0);
+  color: #fff;
+  padding: 48px 36px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+
+.banner-content {
+  max-width: 600px;
+}
+
+.banner h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.banner p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.banner-btn {
+  display: inline-block;
+  background: #fff;
+  color: #1f5fd1;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.banner-btn:hover {
+  background: #e5e7eb;
+  transform: translateY(-2px);
+}
