@@ -22,6 +22,10 @@ function App() {
     category: "Điện tử",
   });
 
+  const lowStockProducts = products.filter(
+  (p) => p.stock >= 1 && p.stock <= 5
+  );
+
   return (
     <>
       <Header />
@@ -43,6 +47,11 @@ function App() {
         <ProductList
           title="Đồ điện tử"
           items={electronics}
+        />
+
+        <ProductList
+          title="Sản phẩm sắp hết hàng"
+          items={lowStockProducts}
         />
       </main>
 

@@ -15,7 +15,9 @@ import { formatPrice } from "../src/utils/format.ts";
 
 import {
   filterProducts,
-  getCategories
+  getCategories,
+  searchByPriceRange,
+  groupByCategory
 } from "../src/utils/product.ts";
 
 let cart: CartItem[] = [];
@@ -50,4 +52,16 @@ console.log(
     keyword: "áo",
     maxPrice: 300000
   }).map((p) => p.name)
+);
+
+console.log(
+  "Sản phẩm từ 100k đến 300k:",
+  searchByPriceRange(products, 100000, 300000).map(
+    (p) => p.name
+  )
+);
+
+console.log(
+  "Số sản phẩm theo danh mục:",
+  groupByCategory(products)
 );
