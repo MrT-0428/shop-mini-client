@@ -27,11 +27,7 @@ export default function ProductCard({ product }: Props) {
           <span className="stock-out">
             Hết hàng
           </span>
-        ) : (
-          <span className="stock-available">
-            Còn hàng: {product.stock}
-          </span>
-        )}
+        ) : null}
 
         <button
           className="btn"
