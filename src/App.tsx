@@ -1,26 +1,48 @@
 
 import Header from "./components/Header";
 import Banner from "./components/Banner";
+import CategoryList from "./components/CategoryList";
 import ProductList from "./components/ProductList";
 import Footer from "./components/Footer";
+
 import { products } from "./data/products";
-import CategoryList from "./components/CategoryList";
+import { filterProducts, getCategories } from "./utils/product";
+
+
 import "./App.css";
 
 function App() {
-  const categories = [...new Set(products.map((p) => p.category))];
+  const categories = getCategories(products);
+  const cheapProducts = filterProducts(products, {
+    maxPrice: 300000,
+    sort: "asc",
+  });
+
+  const electronics = filterProducts(products, {
+    category: "Điện tử",
+  });
+
   return (
     <>
       <Header />
 
-      <main>
-        <Banner />
-        
-        <CategoryList categories={categories} />
+      <Banner />
+
+      <CategoryList categories={categories} />
+        <main>
+          <ProductList
+            title="Sản phẩm nổi bật"
+            items={products}
+          />
 
         <ProductList
-          title="Sản phẩm nổi bật"
-          items={products}
+          title="Giá dưới 300.000 đ"
+          items={cheapProducts}
+        />
+
+        <ProductList
+          title="Đồ điện tử"
+          items={electronics}
         />
       </main>
 
